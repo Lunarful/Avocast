@@ -1,0 +1,49 @@
+# =====================================================
+#                     AvoCast Config
+# =====================================================
+# COLOR CODES:
+#   Classic:  &a &b &c ... &0-&9, &k &l &m &n &o &r
+#   Hex:      &#FF5733   (put a hex code right after &#)
+# Both can be mixed freely in any message below.
+# =====================================================
+
+settings:
+  # How often (in minutes) the broadcast rotates and sends
+  broadcast-interval-minutes: 5
+  # If true, a random message is picked each cycle instead of going in order
+  random-order: false
+  # Enable/disable the auto broadcaster entirely
+  enabled: true
+
+# The messages that rotate on a timer. Add/remove/edit as many as you like.
+# Use {discord} and {vote} and {store} as placeholders — they'll be replaced
+# automatically with the links set below.
+broadcast-messages:
+  - "&8[&6AvoCast&8] &eDon't forget to &avote&e for the server today! &7-> &f{vote}"
+  - "&8[&6AvoCast&8] &bJoin our Discord for events &amp; giveaways: &f{discord}"
+  - "&8[&6AvoCast&8] &dGrab exclusive perks in our store! &7Use &f/buy &7or visit &f{store}"
+
+# Links used by the {discord}, {vote}, {store} placeholders above
+links:
+  discord: "https://discord.gg/yourinvite"
+  vote: "https://yourserver.com/vote"
+  store: "https://yourstore.tebex.io"
+
+# What shows up when a player types /buy
+buy-command:
+  message:
+    - "&8&m--------------------------------"
+    - "&6&lAvoCast &f- &eStore"
+    - "&fSupport the server and unlock awesome perks!"
+    - "&bStore: &f&n{store}"
+    - "&8&m--------------------------------"
+
+# Plugin system messages
+messages:
+  reload-success: "&aAvoCast configuration reloaded successfully!"
+  no-permission: "&cYou do not have permission to do that."
+  help:
+    - "&6&lAvoCast &7Commands:"
+    - "&e/avocast reload &7- Reload the config.yml"
+    - "&e/avocast help &7- Show this menu"
+    - "&e/buy &7- View store info"

@@ -1,0 +1,23 @@
+name: AvoCast
+version: '1.0.0'
+main: com.avocast.AvoCast
+api-version: '1.21'
+author: YourName
+description: Fully customizable auto-broadcast plugin with vote/discord/store reminders.
+
+commands:
+  buy:
+    description: Shows the server store / purchase information
+    usage: /buy
+  avocast:
+    description: Manage the AvoCast plugin
+    usage: /avocast <reload|help>
+    aliases: [ac, avc]
+
+permissions:
+  avocast.admin:
+    description: Allows use of AvoCast admin commands (reload)
+    default: op
+  avocast.buy:
+    description: Allows use of /buy
+    default: true
